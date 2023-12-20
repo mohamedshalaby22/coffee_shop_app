@@ -75,7 +75,9 @@ class _HomeShopPageState extends State<HomeShopPage> {
                               InkWell(
                                 onTap: () {
                                   appController.addToCartData(
-                                      appController.shopData[index], context);
+                                      appController.shopData[index],
+                                      context,
+                                      index);
                                 },
                                 child: Icon(
                                   Icons.add,

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
               systemOverlayStyle:
                   SystemUiOverlayStyle(statusBarColor: Colors.transparent))),
       home: SplashPage(),
