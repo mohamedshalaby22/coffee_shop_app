@@ -32,12 +32,16 @@ class AppServices extends GetxController {
     ),
   ];
   List<Coffee> cartData = [];
-  void addToCartData(Coffee coffee, context, index) {
+  void addToCartData(
+    Coffee coffee,
+    context,
+  ) {
     if (cartData.where((element) => element.id == coffee.id).isNotEmpty) {
-      cartData[index].quantity++;
+      coffee.quantity++;
     } else {
       cartData.add(coffee);
     }
+
     SnackBarWidget.showSnackBarWidget(
         context, '${coffee.name} Added To Cart Successfully!', Colors.brown);
     update();
