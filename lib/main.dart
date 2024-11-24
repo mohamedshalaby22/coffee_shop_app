@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(
               systemOverlayStyle:
                   SystemUiOverlayStyle(statusBarColor: Colors.transparent))),
-      home: SplashPage(),
+      home: const SplashPage(),
     );
   }
 }

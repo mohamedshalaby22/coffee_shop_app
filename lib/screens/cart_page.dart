@@ -3,7 +3,6 @@ import 'package:coffee_shop_app/services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../components/app_btn.dart';
 import '../components/app_text.dart';
 
 class CartPage extends StatefulWidget {
