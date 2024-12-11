@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Constant {
+class ColorsManager {
+  static Color mainBrown = Colors.brown;
   static Color backgroundColor = Colors.grey[300]!;
 }

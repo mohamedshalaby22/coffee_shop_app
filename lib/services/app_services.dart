@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../components/snack_bar_widget.dart';
+import '../core/components/snack_bar_widget.dart';
 import '../models/coffee.dart';
 
 class AppServices extends GetxController {

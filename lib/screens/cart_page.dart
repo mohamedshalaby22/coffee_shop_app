@@ -1,9 +1,9 @@
-import 'package:coffee_shop_app/components/const.dart';
+import 'package:coffee_shop_app/core/theming/colors.dart';
 import 'package:coffee_shop_app/services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../components/app_text.dart';
+import '../core/components/app_text.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _CartPageState extends State<CartPage> {
     return GetBuilder<AppServices>(
       init: Get.put(AppServices()),
       builder: (appController) => Scaffold(
-        backgroundColor: Constant.backgroundColor,
+        backgroundColor: ColorsManager.backgroundColor,
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),

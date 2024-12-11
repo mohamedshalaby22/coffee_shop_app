@@ -1,8 +1,7 @@
-import 'package:coffee_shop_app/components/const.dart';
-import 'package:coffee_shop_app/screens/home_shop_page.dart';
+import 'package:coffee_shop_app/core/theming/colors.dart';
+import 'package:coffee_shop_app/features/home/ui/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
 import 'cart_page.dart';
 
 class HomeLayoutPage extends StatefulWidget {
@@ -14,18 +13,18 @@ class HomeLayoutPage extends StatefulWidget {
 
 class _HomeLayoutPageState extends State<HomeLayoutPage> {
   List<Widget> pages = [
-    const HomeShopPage(),
+    const HomeScreen(),
     const CartPage(),
   ];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constant.backgroundColor,
+      backgroundColor: ColorsManager.backgroundColor,
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(25),
         child: GNav(
-            backgroundColor: Constant.backgroundColor,
+            backgroundColor: ColorsManager.backgroundColor,
             color: Colors.grey[400],
             activeColor: Colors.grey[700],
             tabBorderRadius: 24,

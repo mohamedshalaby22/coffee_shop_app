@@ -1,25 +1,7 @@
-import 'package:coffee_shop_app/screens/splash_page.dart';
+import 'package:coffee_shop_app/coffee_app.dart';
+import 'package:coffee_shop_app/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-              systemOverlayStyle:
-                  SystemUiOverlayStyle(statusBarColor: Colors.transparent))),
-      home: const SplashPage(),
-    );
-  }
+  runApp(CoffeeApp(appRouter: AppRouter()));
 }

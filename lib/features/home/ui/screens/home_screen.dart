@@ -1,23 +1,23 @@
-import 'package:coffee_shop_app/components/const.dart';
+import 'package:coffee_shop_app/core/theming/colors.dart';
 import 'package:coffee_shop_app/services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../components/app_text.dart';
+import '../../../../core/components/app_text.dart';
 
-class HomeShopPage extends StatefulWidget {
-  const HomeShopPage({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeShopPage> createState() => _HomeShopPageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeShopPageState extends State<HomeShopPage> {
+class _HomeScreenState extends State<HomeScreen> {
   AppServices appController = Get.put(AppServices());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constant.backgroundColor,
+      backgroundColor: ColorsManager.backgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),

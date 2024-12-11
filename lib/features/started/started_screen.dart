@@ -1,22 +1,20 @@
-import 'package:coffee_shop_app/components/app_btn.dart';
-import 'package:coffee_shop_app/components/app_text.dart';
+import 'package:coffee_shop_app/core/components/app_text_button.dart';
+import 'package:coffee_shop_app/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../components/const.dart';
-import 'home_layout.dart';
+import '../../core/components/app_text.dart';
+import '../../core/routing/routes.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class StartedScreen extends StatefulWidget {
+  const StartedScreen({Key? key}) : super(key: key);
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<StartedScreen> createState() => _StartedScreenState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _StartedScreenState extends State<StartedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constant.backgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,11 +43,10 @@ class _SplashPageState extends State<SplashPage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: AppButton(
-                text: 'Enter Shop',
-                onTap: () {
-                  Get.to(() => const HomeLayoutPage(),
-                      transition: Transition.leftToRight);
+              child: AppTextButton(
+                buttonText: 'Enter Shop',
+                onPressed: () {
+                  context.pushNamed(Routes.homeScreen);
                 },
               ),
             ),
