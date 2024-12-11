@@ -46,7 +46,7 @@ class _StartedScreenState extends State<StartedScreen> {
               child: AppTextButton(
                 buttonText: 'Enter Shop',
                 onPressed: () {
-                  context.pushNamed(Routes.homeScreen);
+                  context.pushNamed(Routes.homeLayoutScreen);
                 },
               ),
             ),
